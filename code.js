@@ -325,7 +325,7 @@
 //     var result = undefined;
 
 //     for(var i=0; i < arr.length; i++){
-        
+
 //         if(result == undefined){
 
 //             result = arr[i];
@@ -367,7 +367,7 @@
 // var arr = [1,2,3];
 
 // function myMap(arr,callBack){
-     
+
 //     for(var i = 0; i < arr.length; i++){
 
 //         callBack(arr[i]);
@@ -377,9 +377,157 @@
 
 
 //  myMap(arr, function(data){
- 
+
 //     console.log(data + 2)
 
 
 // })
 
+//Scop And Closer Consept
+
+//   function createFunction(){
+//       function multiplyBy2(num){
+//              return num * 2;
+//        }
+//         return multiplyBy2;
+
+//   }
+
+//   var generateFunc = createFunction();
+//   var result = generateFunc
+
+//   console.log(result(3)) 
+
+// function one(){
+//     var a = 40;
+//     console.log(a);
+
+//     function inner(){
+
+//         console.log(a)
+//     }
+//     inner()
+// }
+
+// one()
+
+// function two(){
+
+//     var b = 50;
+//     console.log(b);
+// }
+
+// two()
+
+
+// function first(){
+
+//     var counter = 0;
+//     function inner(){
+
+//        return counter++;
+
+//     }
+
+//     return inner
+
+// }
+
+// const result1 = first();
+// const result3 = result1
+
+// console.log(result3())
+// console.log(result3())
+// console.log(result3())
+
+// console.log(result1())
+// console.log(result1())
+// console.log(result1())
+// console.log(result1())
+
+
+//Object Creation
+
+// var arr =
+//     [1,
+//         4,
+//         6,
+//         8,
+//         'Mahidul Islam',
+//         function anotherName() { console.log('function') },
+//         { name: 'Mahidul' }
+//     ]
+
+// console.log(arr[5]())
+
+//type1
+
+// var obj = {}
+
+// obj.name ='Mahidul Islam'
+// obj.email = 'kmahidul17@gmail.com'
+
+// console.log(obj.name)
+// console.log(obj['email'])
+
+//type2
+
+//  var obj1 = {
+
+//      name :'Mahidul Islam',
+//      phone : '01925691172',
+     
+
+//      anotherObject : {
+          
+//         className : 'Javascript',
+//         classShedule:'Friday',
+//         name:'Khandaker',
+
+//         getAnothername: function(){
+
+//             console.log(obj1.anotherObject.name)
+//         },
+//         country :['Bangladesh', 'Finland', 'Australia']
+
+//      },
+//      city : ['Dhaka', 'Chittagona', 'Chandpur'],
+//      getName: function(){
+
+//         console.log(obj1.name)
+//      }
+//  };
+ 
+//  console.log(obj1.anotherObject.country[2])
+//  console.log(obj1.anotherObject.getAnothername())
+//  console.log(obj1.city)
+//  obj1.getName()
+//  for(item in obj1){
+
+//     console.log(item)
+//  }
+
+//  console.log(obj1.name)
+
+//type3
+
+// var obj4 = new Object()
+
+// console.log(typeof obj4)
+
+//type4
+
+// function obj6(name, email, phone){
+
+//     newObj4 = {}
+
+//     newObj4.name = name;
+//     newObj4.email = email;
+//     newObj4.phone = phone;
+
+//     return newObj4;
+// }
+
+// var result = obj6('Mahidul Islam', 'kmahidul17@gmail.com', '01925691172');
+
+// console.log(result.email)
